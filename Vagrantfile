@@ -9,6 +9,8 @@ Vagrant.configure('2') do |config|
  
   config.vm.network :private_network, ip: '192.168.50.50'
   config.vm.synced_folder '.', '/vagrant', nfs: true
+
+  config.ssh.private_key_path = "~/.ssh/id_rsa"
  
   config.vm.provider :virtualbox do |v, override|
     v.gui = false
