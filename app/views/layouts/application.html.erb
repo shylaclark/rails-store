@@ -6,9 +6,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class ='<%=controller.controller_name %>'>
-
-<%= yield %>
-
+<body class ="<%=controller.controller_name %>">
+<div id ="banner">
+  <%= image_tag("logo.jpg") %>
+  <!-- <%= @page_title || "Shop" %> -->
+</div>
+<div id="columns">
+  <div id="side">
+    <ul>
+      <li><a href="http://localhost:3000">Home</a></li>
+      <li><a href="http://localhost:3000/users/new">Sign Up</a></li>
+      <li><a href="http://localhost:3000/login">Login</a></li>
+      <%= link_to 'Cart', carts_url %>
+    </ul>
+  </div>
+  <div id="main">
+    <%= yield %>
+  </div>
+</div>
 </body>
 </html>

@@ -1,10 +1,35 @@
 Rails.application.routes.draw do
-  resources :products
+
+  # You can have the root of your site routed with "root"
+  root 'shop#index', as: 'shop'
+
+  get 'admin' => 'admin#index'
+  get 'signup' => 'users#new'
+  get 'login' => 'sessions#new'
+  get 'login' => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
+
+  get 'sessions/destroy'
+  get 'shop/index'
+
+  resources :users
+  resources :orders
+  resources :order_items
+  resources :carts
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :products do
+    get :who_bought, on: :member
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

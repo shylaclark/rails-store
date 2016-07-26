@@ -47,5 +47,8 @@ group :development do
 
   gem 'rails_12factor', group: :production3
 
+  # Use ActiveModel has_secure_password to validate that passwords match.
+  gem 'bcrypt'
+
 end
 
