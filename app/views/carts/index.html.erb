@@ -1,25 +1,24 @@
 
-<h1>Carts</h1>
-<p id="notice"><%= notice %></p>
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
 
 <table>
   <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
+    <strong>Abandoned Carts</strong>
   </thead>
 
   <tbody>
-    <% @carts.each do |cart| %>
+  <% @carts.each do |cart| %>
       <tr>
         <td><%= link_to 'View', cart %></td>
         <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
         <td><%= link_to 'Delete', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Cart', new_cart_path %>
+<%= link_to 'Back', admin_path %>
