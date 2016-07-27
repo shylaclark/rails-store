@@ -5,7 +5,7 @@
 
   <%= form_tag do %>
   <fieldset>
-    <legend><strong>Sign In</strong></legend>
+    <legend><strong>Login</strong></legend>
     <div class="field">
       <%= label_tag :name %><br>
       <%= text_field_tag :name, params[:name] %>
@@ -15,7 +15,7 @@
       <%= password_field_tag :password, params[:password] %>
     </div>
     <div class="actions">
-      <%= submit_tag 'Login' %>
+      <%= submit_tag 'Submit' %>
     </div>
     <div>
       <p>New user? <%= link_to 'Sign up!', signup_path %></p>

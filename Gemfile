@@ -53,5 +53,9 @@ group :development do
 
   gem 'annotate', '~> 2.7', '>= 2.7.1'
 
+  gem 'lograge'
+
+  gem 'exception_notifier'
+
 end
 
