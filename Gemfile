@@ -12,6 +12,7 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -24,8 +25,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+#Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -48,7 +49,9 @@ group :development do
   gem 'rails_12factor', group: :production3
 
   # Use ActiveModel has_secure_password to validate that passwords match.
-  gem 'bcrypt'
+  # gem 'bcrypt'
+
+  gem 'annotate', '~> 2.7', '>= 2.7.1'
 
 end
 
