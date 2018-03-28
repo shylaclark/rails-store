@@ -9,27 +9,17 @@ Add rbenv to bash
 $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 ```
-List all Ruby versions available for install.
-```
-$ rbenv install -l
-```
-Install Ruby
-```
-$ rbenv install 2.0.0-p247
-```
-Check target version
-```
-$ rbenv version
-```
-Change version
-```
-$ rbenv local 2.0.0-p247
-```
-Install gems
-```
-$ gem install bundler
-```
-Rails:  
+List all Ruby versions available for install: `$ rbenv install -l`
+
+Install Ruby: `$ rbenv install 2.0.0-p247`
+
+Check target version: `$ rbenv version`
+
+Change version: `$ rbenv local 2.0.0-p247`
+
+Install gems: `$ gem install bundler`
+
+Rails 
 
 System dependencies
 
