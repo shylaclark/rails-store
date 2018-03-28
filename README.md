@@ -2,16 +2,23 @@
 ## CSCI 4990 - Special Topics in Computer Science (Ruby on Rails) 
 
 ### Getting Started
-Use rbenv (not rvm) to manage Ruby versions
+Check your current Ruby version.
+```
+$ ruby -v
+```
+macOS ships with a system Ruby installed in `/usr/bin/ruby`. Don't use. Instead use [rbenv](https://github.com/rbenv/rbenv#installing-ruby-versions) (not rvm) to manage Ruby versions and gem bundles.
+
+Install rbenv
 ```
 # Install
 $ brew install rbenv
 
 # Add rbenv to bash
-$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-source ~/.bash_profile
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+$ exec $SHELL -l
 ```
-Install Ruby and gems
+Install Ruby and gem bundler
 ```
 # List all Ruby versions available for install
 $ rbenv install -l
@@ -33,7 +40,11 @@ $ gem install bundler
 ```
 Install Rails
 ```
-... 
+# Install Rails
+$ gem install rails --version 4.0.0 --no-ri --no-rdoc
+
+# Verify install
+$ rails -v
 ```
 
 System dependencies
