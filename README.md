@@ -2,7 +2,11 @@
 ## CSCI 4990 - Special Topics in Computer Science (Ruby on Rails) 
 
 ### Getting Started
-Check your current Ruby version.
+Check to make sure you're not running Ruby from /usr/bin
+```
+$ which ruby
+```
+Get version info
 ```
 $ ruby -v
 ```
@@ -50,18 +54,37 @@ $ rails -v
 To switch version of Rails used in project, change Rails number in Gemfile in root folder of application and run `$ bundle install`.
 
 Database
-```
-# Configure Database
-SQLite3
+* [pg](https://rubygems.org/gems/pg/versions/0.18.4) gem
 
-# Initialize Database
 ```
+# Install global postgresql
+$ brew install postgresql
 
+# Install Postgres adapter gem
+$ gem install pg -v 0.18.4
+
+# Add to Gemfile
+gem 'pg', '~> 0.18.4'
+
+# Resolve dependencies
+$ bundle install
+```
+Production Testing
+```
+$ brew services start postgresql
+$ rake db:setup
+$ rails server
+
+```
 Services (job queues, cache servers, search engines, etc.)
 
 ### Testing
 How to run the test suite
 
 ### Deployment Instructions
+```
+$ rails server
+
+```
 
 
