@@ -1,5 +1,5 @@
 # Final Project: Ruby on Rails E-Commerce Site
-## CSCI 4990 - Special Topics in Computer Science (Ruby on Rails) 
+### CSCI 4990 - Special Topics in Computer Science (Ruby on Rails) 
 
 ### Getting Started
 Check to make sure you're not running Ruby from /usr/bin
@@ -71,20 +71,14 @@ $ bundle install
 ```
 Production Testing
 ```
-$ brew services start postgresql
 $ rake db:setup
 $ rails server
 
 ```
-Services (job queues, cache servers, search engines, etc.)
 
-### Testing
-How to run the test suite
-
-### Deployment Instructions
+Troubleshooting
 ```
-$ rails server
-
+# Run this before rake db:setup
+$ brew services start postgresql
 ```
-
 
