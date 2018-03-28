@@ -2,10 +2,8 @@
 ## CSCI 4990 - Special Topics in Computer Science (Ruby on Rails) 
 
 ### Getting Started
-Use rbenv (not rvm) to manage Ruby versions.
-```
-$ brew install rbenv
-```
+Use rbenv (not rvm) to manage Ruby versions: `$ brew install rbenv`
+
 Add rbenv to bash
 ```
 $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
