@@ -22,7 +22,10 @@ $ rbenv install 2.0.0-p247
 # Check target version
 $ rbenv version
 
-# Switch version
+# Switch global version
+$ rbenv global 2.0.0-p247
+
+# Switch local version (project-specific, usually for legacy code)
 $ rbenv local 2.0.0-p247
 
 # Install gems
