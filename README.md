@@ -45,9 +45,9 @@ $ gem install rails --version 4.0.0 --no-ri --no-rdoc
 
 # Verify install
 $ rails -v
-```
 
-System dependencies
+```
+To switch version of Rails used in project, change Rails number in Gemfile in root folder of application and run `$ bundle install`.
 
 Database
 ```
