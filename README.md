@@ -8,7 +8,7 @@ System dependencies
 
 Configuration
 
-Database creation
+Database: SQLite 3
 
 Database initialization
 
