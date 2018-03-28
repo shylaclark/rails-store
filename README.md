@@ -7,6 +7,7 @@ Get version info  `$ ruby -v`
 macOS ships with a system Ruby installed in `/usr/bin/ruby`. Don't use. Instead use [rbenv](https://github.com/rbenv/rbenv#installing-ruby-versions) (not rvm) to manage Ruby versions and gem bundles.
 
 #### Install rbenv
+rbenv manages different versions of Ruby on your machine.
 ```
 # Install
 $ brew install rbenv
